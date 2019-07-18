@@ -16,15 +16,11 @@ class FactoryB: AbstractFactory {
 }
 
 class Factory {
-    static func get(factory: String) -> AbstractFactory {
-        switch factory {
-        case "A":
-            return FactoryA()
-        default:
-            return FactoryB()
-        }
+    
+    static func showMessage(factory: AbstractFactory) {
+        factory.show()
     }
 }
 
-Factory.get(factory: "A").show()
-Factory.get(factory: "B").show()
+Factory.showMessage(factory: FactoryA())
+Factory.showMessage(factory: FactoryB())
