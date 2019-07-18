@@ -16,11 +16,10 @@ class FactoryB: AbstractFactory {
 }
 
 class Factory {
-    
-    static func showMessage(factory: AbstractFactory) {
+    static func showMessage(by factory: AbstractFactory) {
         factory.show()
     }
 }
 
-Factory.showMessage(factory: FactoryA())
-Factory.showMessage(factory: FactoryB())
+Factory.showMessage(by: FactoryA())
+Factory.showMessage(by: FactoryB())
