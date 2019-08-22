@@ -6,12 +6,22 @@ protocol HouseDataSource {
 }
 
 class House: HouseDataSource {
+    
+    private var name = ""
+    private var number = 0
+    
     func buy(name: String, number: Int) {
+        self.name = name + " Chen"
+        self.number = number
         print("實作")
     }
     
     func buy(name: String, company: String) {
         print("懶得有動作")
+    }
+    
+    func printValue() {
+        print("name = \(self.name) \(self.number)")
     }
 }
 
@@ -27,3 +37,4 @@ class Car: CarDataSource {
         print("實作")
     }
 }
+
