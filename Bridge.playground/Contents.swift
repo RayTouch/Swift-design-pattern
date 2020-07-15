@@ -12,7 +12,7 @@ protocol ProductProtocol {
     func buy(number: Int)
 }
 
-class Product: ProductProtocol, PriceProtocol {
+class Product1: ProductProtocol, PriceProtocol {
     var price: Int = 0
     var number: Int = 0
     var name: String
@@ -41,7 +41,7 @@ class Product: ProductProtocol, PriceProtocol {
     }
 }
 
-class ChickenProduct: Product {
+class ChickenProduct: Product1 {
     
     override func setPricing(money: Int) {
         self.price = money
